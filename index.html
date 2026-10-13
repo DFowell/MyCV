@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dominic Fowell | Personal CV</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --ink: #1f2430;
+      --muted: #5d6578;
+      --accent: #3b5bdb;
+      --accent-soft: #e7ecff;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header / hero */
+    header {
+      background: linear-gradient(135deg, #3b5bdb 0%, #5f3dc4 100%);
+      color: #fff;
+      padding: 56px 20px 72px;
+      text-align: center;
+    }
+    .avatar {
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,.85);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      background: #dfe4ff;
+      margin-bottom: 18px;
+    }
+    header h1 { font-size: 2.4rem; letter-spacing: .5px; }
+    header .tagline { font-size: 1.15rem; opacity: .92; margin-top: 6px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px;
+      padding: 12px 10px;
+    }
+    nav a { color: var(--ink); font-weight: 600; font-size: .95rem; }
+    nav a:hover { color: var(--accent); text-decoration: none; }
+
+    main { max-width: 900px; margin: -36px auto 60px; padding: 0 18px; }
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 18px rgba(31,36,48,.07);
+      padding: 30px 34px;
+      margin-bottom: 26px;
+    }
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--accent-soft);
+      display: inline-block;
+    }
+    p + p { margin-top: 12px; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+    .skills li {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+    .skill-group + .skill-group { margin-top: 18px; }
+    .skill-group h3 { font-size: 1rem; color: var(--muted); margin-bottom: 8px; }
+
+    /* Timeline (education + work) */
+    .entry { padding-left: 20px; border-left: 3px solid var(--accent-soft); position: relative; }
+    .entry + .entry { margin-top: 24px; }
+    .entry::before {
+      content: ""; position: absolute; left: -9px; top: 6px;
+      width: 15px; height: 15px; border-radius: 50%;
+      background: var(--accent); border: 3px solid #fff;
+    }
+    .entry h3 { font-size: 1.08rem; }
+    .entry .meta { color: var(--muted); font-size: .9rem; margin-bottom: 6px; }
+    .entry ul { margin: 6px 0 0 18px; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .contact-item { background: var(--bg); border-radius: 10px; padding: 14px 16px; }
+    .contact-item span { display: block; font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
+
+    /* Blog links */
+    .posts { list-style: none; }
+    .posts li { padding: 10px 0; border-bottom: 1px solid #eceef5; }
+    .posts li:last-child { border-bottom: none; }
+
+    footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 0 0 30px; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      section { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dominic Fowell</h1>
+    <p class="tagline">St. Albans &middot; Hertfordshire</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        A highly motivated and hardworking sixth-form leaver with strong academic results in mathematics and the sciences, alongside practical work 	experience.
+      </p>
+      <p>
+	I am a reliable, organised, and conscientious individual with strong analytical and problem-solving abilities, eager to learn, take on new 	challanges, and further develop my skills within a professional workspace.
+      </p>
+      <p>
+	My education and work experience has developed my communication, teamwork, attention to detail, and ability to work in a professional 	environment.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills &amp; Competencies</h2>
+      <div class="skill-group">
+        <h3>Technical</h3>
+        <ul class="skills">
+          <li>HTML &amp; CSS</li>
+          <li>Python</li>
+          <li>Git &amp; GitHub</li>
+          <li>Data Analysis</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Professional</h3>
+        <ul class="skills">
+          <li>Problem solving</li>
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Time management</li>
+          <li>Attention to detail</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="entry">
+        <h3>A-Levels</h3>
+        <div class="meta">Sandringham School, St. Albans &middot; 09/2023 &ndash; 06/2025</div>
+	<p>Biology - A</p>
+	<p>Chemistry - A</p>
+	<p>Maths - B</p>
+      </div>
+      <div class="entry">
+        <h3>AS-Levels</h3>
+        <div class="meta">Sandringham School, St. Albans &middot; 09/2023</div>
+	<p>Further Maths - A</p>
+      </div>
+      <div class="entry">
+        <h3>GCSEs</h3>
+        <div class="meta">St. Columba's College, St. Albans &middot; 09/2019 - 06/2023</div>
+        <p>Further Maths - 9</p>
+	<p>Computer Science - 9</p>
+	<p>Physics - 9</p>
+	<p>Chemistry - 9</p>
+	<p>Geography - 9</p>
+	<p>Maths - 8</p>
+	<p>Biology - 8</p>
+	<p>English Language - 8</p>
+	<p>English Literature - 7</p>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="entry">
+        <h3>Dental Surgery Work Experience</h3>
+        <div class="meta">Redbourn Dental Practice &middot; During school holidays from 2023 - 2026</div>
+        <ul>
+          <li>Developed an appreciation of the importance of organisation and attention to detail.</li>
+          <li>Worked reception, furthering my computing skills and data analysis.</li>
+          <li>Demonstrated punctuality, professionalism, and enthusiasm throughout the placement.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>Hospital Work Experience</h3>
+        <div class="meta">Whittington Hospital &middot; [Dates]</div>
+        <ul>
+          <li>Developed an understanding of the importance of teamwork, communication, and prefessionalism.</li>
+          <li>Developed a greater awareness of the importance of confidentiality, organisation, and attention to detail.</li>
+	  <li>Demonstrated a responsible and respectful approach throughout the placement.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-item"><span>Name</span>Dominic Fowell</div>
+        <div class="contact-item"><span>Phone</span><a href="tel:+447503971248">+44 7503 971248</a></div>
+        <div class="contact-item"><span>Email</span><a href="mailto:Dominicfowell07@hotmail.com">Dominicfowell07@hotmail.com</a></div>
+        <div class="contact-item"><span>GitHub</span><a href="https://github.com/DFowell" target="_blank" rel="noopener">github.com/DFowell</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>&copy; 2026 Dominic Fowell. Built with HTML &amp; CSS.</footer>
+
+</body>
+</html>
